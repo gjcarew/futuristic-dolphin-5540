@@ -35,7 +35,7 @@ RSpec.describe 'Mechanics index' do
       expect(page).to have_content(@mechanic_5.years_experience)
     end
 
-    xit 'I see average years of experience across all mechanics' do
+    it 'I see average years of experience across all mechanics' do
       average_exp = ((1 + 2 + 3 + 4 + 5).to_f / 5).round(1)
       expect(page).to have_content("Average years of experience: #{average_exp}")
     end

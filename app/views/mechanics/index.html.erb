@@ -1,4 +1,5 @@
 <h1 id='header'>All Mechanics</h1>
+<p>Average years of experience: <%= Mechanic.average(:years_experience) %></p>
 
 <% @mechanics.each do |mechanic| %>
   <h3> <%= mechanic.name %> </h3>
