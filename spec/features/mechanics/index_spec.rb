@@ -3,12 +3,6 @@ require 'rails_helper'
 RSpec.describe 'Mechanics index' do
   describe 'when I visit a mechanics index page' do
     before :each do
-      @six_flags = AmusementPark.create!(name: 'Six Flags', admission_cost: 75)
-
-      @hurler = @six_flags.rides.create!(name: 'The Hurler', thrill_rating: 7, open: true)
-      @scrambler = @six_flags.rides.create!(name: 'The Scrambler', thrill_rating: 4, open: true)
-      @ferris = @six_flags.rides.create!(name: 'Ferris Wheel', thrill_rating: 7, open: false)
-
       @mechanic_1 = Mechanic.create!(name: 'Chris', years_experience: 1)
       @mechanic_2 = Mechanic.create!(name: 'Janet', years_experience: 2)
       @mechanic_3 = Mechanic.create!(name: 'Jackson', years_experience: 3)
