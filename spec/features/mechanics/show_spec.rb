@@ -25,5 +25,15 @@ RSpec.describe 'Mechanic show page' do
       expect(all('.ride-name')[1].text).to eq(@hurler.name).or eq(@ferris.name)
       expect(all('.ride-name')[2].text).to eq(@scrambler.name)
     end
+
+    it 'Add a ride to a mechanic' do
+      @mechanic.rides << @hurler
+      @mechanic.rides << @scrambler
+      visit "/mechanics/#{@mechanic.id}"
+      fill_in :ride_id, with: @ferris.id
+      click_on 'Submit'
+      expect(current_path).to eq("/mechanics/#{@mechanic.id}")
+      expect(page).to have_content(@ferris.name)
+    end
   end
 end
