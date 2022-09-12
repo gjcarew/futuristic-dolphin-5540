@@ -1,0 +1,6 @@
+<h1 id='header'>All Mechanics</h1>
+
+<% @mechanics.each do |mechanic| %>
+  <h3> <%= mechanic.name %> </h3>
+  <p> Years of experience: <%= mechanic.years_experience %> </h3>
+<% end %>
