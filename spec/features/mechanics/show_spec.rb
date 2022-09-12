@@ -30,7 +30,7 @@ RSpec.describe 'Mechanic show page' do
       @mechanic.rides << @hurler
       @mechanic.rides << @scrambler
       visit "/mechanics/#{@mechanic.id}"
-      fill_in :ride_id, with: @ferris.id
+      fill_in :ride_ID, with: @ferris.id
       click_on 'Submit'
       expect(current_path).to eq("/mechanics/#{@mechanic.id}")
       expect(page).to have_content(@ferris.name)

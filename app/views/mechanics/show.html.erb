@@ -5,3 +5,10 @@
 <% @mechanic.ordered_rides.each do |ride| %>
   <p class="ride-name"><%= ride.name %> </p>
 <% end %>
+<h3>Add a ride to workload </h3>
+<%= form_with url: "/mechanics/#{@mechanic.id}", method: :patch, local: true do |f| %>
+  <%= f.label :ride_ID %>
+  <%= f.number_field :ride_ID %>
+
+  <%= f.submit 'Submit' %>
+<% end %>
