@@ -34,6 +34,7 @@ RSpec.describe 'Mechanic show page' do
       click_on 'Submit'
       expect(current_path).to eq("/mechanics/#{@mechanic.id}")
       expect(page).to have_content(@ferris.name)
+      expect(@mechanic.rides).to include(@ferris)
     end
   end
 end
