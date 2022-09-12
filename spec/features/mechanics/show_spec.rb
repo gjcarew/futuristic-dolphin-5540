@@ -16,7 +16,7 @@ RSpec.describe 'Mechanic show page' do
       expect(page).to have_content("Years of experience: #{@mechanic.years_experience}")
     end
 
-    xit 'The rides they are working on are listed by thrill rating in descending order' do
+    it 'The rides they are working on are listed by thrill rating in descending order' do
       @mechanic.rides << @hurler
       @mechanic.rides << @scrambler
       @mechanic.rides << @ferris
